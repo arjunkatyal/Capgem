@@ -1,0 +1,54 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
+workflows:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
+    jobs:
+      - welcome/run
+package com.abc.lab1.bean;
+
+public class Employee {
+ private int employeeId;
+private String employeeName;
+private double salary;
+private String businessUnit;
+private int age;
+public int getEmployeeId() {
+return employeeId;
+}
+public void setEmployeeId(int employeeId) {
+this.employeeId = employeeId;
+}
+public String getEmployeeName() {
+return employeeName;
+}
+public void setEmployeeName(String employeeName) {
+this.employeeName = employeeName;
+}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public String getBusinessUnit() {
+		return businessUnit;
+	}
+	public void setBusinessUnit(String businessUnit) {
+		this.businessUnit = businessUnit;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+		
+}
